@@ -1,0 +1,185 @@
+/* ===== Global Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Animated background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== Card Containers ===== */
+.login-container, .dashboard, .leaderboard-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ===== Headings ===== */
+h1, h2 {
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+/* ===== Input Fields ===== */
+input[type="text"], input[type="email"], input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus {
+  border-color: #2575fc;
+}
+
+/* ===== Buttons ===== */
+button, a {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  color: #fff;
+  padding: 12px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover, a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 118, 146, 0.6);
+}
+
+/* ===== Rewards List ===== */
+ul {
+  list-style: none;
+  margin-top: 10px;
+  padding: 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.15);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+ul li:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Leaderboard Specific ===== */
+.leaderboard-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.leaderboard-list li {
+  background: rgba(255, 255, 255, 0.2);
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+}
+
+.leaderboard-list li span.rank {
+  font-weight: bold;
+  background: rgba(0,0,0,0.2);
+  padding: 5px 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* ===== Back Button ===== */
+.back-btn {
+  display: block;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* ===== Responsive Typography ===== */
+#internName {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* ===== Responsive Design ===== */
+
+/* Tablets */
+@media (min-width: 600px) {
+  .login-container, .dashboard, .leaderboard-container {
+    max-width: 500px;
+    padding: 40px 30px;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Laptops and Desktops */
+@media (min-width: 992px) {
+  body {
+    padding: 40px;
+  }
+  .login-container, .dashboard, .leaderboard-container {
+    max-width: 600px;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  p, li {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Extra Features ===== */
+.login-container, .dashboard, .leaderboard-container, button, a, input {
+  transition: all 0.3s ease-in-out;
+}
+
+.login-container:hover, .dashboard:hover, .leaderboard-container:hover {
+  box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+}
